@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "269e1b5b-1aba-4559-bfe6-b55cddd1decf",
+		"name": "ProductArenaTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@academy387\",\r\n  \"password\": \"test12345!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testamila.free.beeceptor.com/login",
+					"protocol": "https",
+					"host": [
+						"testamila",
+						"free",
+						"beeceptor",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN - server error",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@academy387\",\r\n  \"password\": \"test12345!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testamila.free.beeceptor.com/login/?no-network",
+					"protocol": "https",
+					"host": [
+						"testamila",
+						"free",
+						"beeceptor",
+						"com"
+					],
+					"path": [
+						"login",
+						""
+					],
+					"query": [
+						{
+							"key": "no-network",
+							"value": null
+						}
+					]
+				},
+				"description": "LOGIN - server error"
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN - no internet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@academy387\",\r\n  \"password\": \"test12345!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testamila.free.beeceptor.com/login/?no-network",
+					"protocol": "https",
+					"host": [
+						"testamila",
+						"free",
+						"beeceptor",
+						"com"
+					],
+					"path": [
+						"login",
+						""
+					],
+					"query": [
+						{
+							"key": "no-network",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN - invalid credentials",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@academy387\",\r\n  \"password\": \"wrong-test12345!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testamila.free.beeceptor.com/login/?Invalid",
+					"protocol": "https",
+					"host": [
+						"testamila",
+						"free",
+						"beeceptor",
+						"com"
+					],
+					"path": [
+						"login",
+						""
+					],
+					"query": [
+						{
+							"key": "Invalid",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Content - get developer title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://testamila.free.beeceptor.com/content",
+					"protocol": "https",
+					"host": [
+						"testamila",
+						"free",
+						"beeceptor",
+						"com"
+					],
+					"path": [
+						"content"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGOUT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bearerToken\": \"abcdefgh123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testamila.free.beeceptor.com/logout",
+					"protocol": "https",
+					"host": [
+						"testamila",
+						"free",
+						"beeceptor",
+						"com"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
